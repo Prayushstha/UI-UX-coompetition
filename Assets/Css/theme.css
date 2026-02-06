@@ -1,0 +1,27 @@
+/* LIGHT MODE */
+:root{
+    --primary-color: #5eb5ee;
+    --secondary-color: #9cfff2;
+    --tertiary-color: #b5fae0;
+
+    --bg-primary: #ffffff;
+    --bg-secondary: #f1f5f9;
+
+    --text-primary: #0f172a;
+    --text-muted: #64748b;
+
+    --radius: 16px;
+}
+
+/* DARK MODE */
+body.dark-theme{
+    --primary-color: #0c75bb;
+    --secondary-color: #309487;
+    --tertiary-color: #b5fae0;
+
+    --bg-primary: #0f1117;
+    --bg-secondary: #171a23;
+
+    --text-primary: #e6e6eb;
+    --text-muted: #9aa0b3;
+}

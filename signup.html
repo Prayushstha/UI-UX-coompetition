@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome Back</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* LIGHT MODE */
+    :root{
+      --primary-color: #5eb5ee;
+      --secondary-color: #9cfff2;
+      --tertiary-color: #b5fae0;
+
+      --bg-primary: #ffffff;
+      --bg-secondary: #f1f5f9;
+
+      --text-primary: #0f172a;
+      --text-muted: #64748b;
+
+      --radius: 16px;
+    }
+
+    /* DARK MODE */
+    body.dark-theme{
+      --primary-color: #0c75bb;
+      --secondary-color: #309487;
+      --tertiary-color: #b5fae0;
+
+      --bg-primary: #0f1117;
+      --bg-secondary: #171a23;
+
+      --text-primary: #e6e6eb;
+      --text-muted: #9aa0b3;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background: linear-gradient(135deg, var(--secondary-color), var(--bg-secondary));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:1.5rem;
+      color:var(--text-primary);
+    }
+
+    .login-card{
+      width:100%;
+      max-width:420px;
+      background:var(--bg-primary);
+      border-radius:24px;
+      padding:2rem;
+      box-shadow:0 20px 40px rgba(0,0,0,0.08);
+      display:flex;
+      flex-direction:column;
+      gap:1.5rem;
+    }
+
+    .login-header h1{
+      font-size:1.4rem;
+      font-weight:600;
+    }
+
+    .login-header p{
+      font-size:0.9rem;
+      color:var(--text-muted);
+      margin-top:0.3rem;
+    }
+
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:0.4rem;
+    }
+
+    label{
+      font-size:0.8rem;
+      color:var(--text-muted);
+    }
+
+    input{
+      padding:0.75rem 0.9rem;
+      border-radius:var(--radius);
+      border:1px solid var(--bg-secondary);
+      background:var(--bg-secondary);
+      font-size:0.9rem;
+      color:var(--text-primary);
+      outline:none;
+      transition:border 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input:focus{
+      border-color:var(--primary-color);
+      box-shadow:0 0 0 3px rgba(94,181,238,0.25);
+      background:var(--bg-primary);
+    }
+
+    .helper-text{
+      font-size:0.75rem;
+      color:var(--text-muted);
+    }
+
+    .login-btn{
+      margin-top:0.5rem;
+      padding:0.85rem;
+      border:none;
+      border-radius:var(--radius);
+      background:linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color:#fff;
+      font-size:0.95rem;
+      font-weight:500;
+      cursor:pointer;
+      transition:transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .login-btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.12);
+    }
+
+    .login-footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:0.8rem;
+      color:var(--text-muted);
+    }
+
+    .login-footer a{
+      color:var(--primary-color);
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    .privacy-note{
+      margin-top:0.5rem;
+      text-align:center;
+      font-size:0.75rem;
+      color:var(--text-muted);
+    }
+
+    .theme-toggle{
+      position:absolute;
+      top:1rem;
+      right:1rem;
+      background:var(--bg-primary);
+      border:1px solid var(--bg-secondary);
+      border-radius:999px;
+      padding:0.4rem 0.8rem;
+      font-size:0.75rem;
+      cursor:pointer;
+      color:var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="document.body.classList.toggle('dark-theme')">
+    Toggle theme
+  </button>
+
+  <div class="login-card">
+    <div class="login-header">
+      <h1>Welcome back 🌱</h1>
+      <p>Take your time. We’re glad you’re here.</p>
+    </div>
+
+    <div class="field">
+      <label>Email address</label>
+      <input type="email" placeholder="you@example.com" />
+      <div class="helper-text">We’ll never share your email.</div>
+    </div>
+
+    <div class="field">
+      <label>Password</label>
+      <input type="password" placeholder="••••••••" />
+      <div class="helper-text">Your password stays private.</div>
+    </div>
+
+    <button class="login-btn">Continue safely</button>
+
+    <div class="login-footer">
+      <a href="#">Forgot password?</a>
+      <a href="#">Create account</a>
+    </div>
+
+    <div class="privacy-note">
+      Your information is encrypted and only visible to you.
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,33 +1,870 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontpage</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindScape - Mental Health Support for Teens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Supermercado+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Supermercado+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Assets/Css/style.css" />
+  </head>
+  <body>
     <!-- Navbar -->
-    <nav>
-
-    </nav>
+    <div class="navbar" style="font-size: larger">
+      <a href="#home-link">
+        <div class="logo-container">
+          <img class="logo" src="Assets/Images/Logo.jpg" alt="MindScape Logo" />
+          <p class="logo-name">MindScape</p>
+        </div>
+      </a>
+      <ul>
+        <li class="navbar-list search-nav-item" id="search">
+          <div class="search-container">
+            <input
+              type="text"
+              name="text"
+              class="input"
+              id="navSearchInput"
+              required=""
+              placeholder="Type to search..."
+            />
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="ionicon"
+                viewBox="0 0 512 512"
+              >
+                <title>Search</title>
+                <path
+                  d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                ></path>
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                  d="M338.29 338.29L448 448"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </li>
+        <li class="navbar-list" id="navhome">
+          <a href="#home-link">Home</a>
+        </li>
+        <li class="navbar-list" id="navtrending">
+          <a href="#services">Services</a>
+        </li>
+        <li class="navbar-list" id="navabout">
+          <a href="#contact">Contact Us</a>
+        </li>
+        <li class="navbar-list" id="navprofile">
+          <a href="signup.html"
+            ><i class="fas fa-user-alt" style="scale: 1.4"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    
     <!-- Main content -->
-     <div class="main-container">
-        <!-- Additional -->
+    <div class="main-container">
+      <!-- Hero Section -->
+      <section class="main-Hero" id="home-link">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">You're Not Alone in This</h1>
+          <p class="hero-subtitle">Mental health support designed for teens, by people who care. Anonymous. Judgment-free. Always here.</p>
+          <div class="hero-buttons">
+            <button class="hero-btn primary">Get Started Free</button>
+            <button class="hero-btn secondary">Talk to Someone Now</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">50k+</span>
+              <span class="stat-label">Teens Helped</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support Available</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Confidential</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Aside -->
-         <aside>
+      <!-- Services-->
+      <section class="services" id="services">
+        <!-- Hero / Vibe Check -->
+        <div class="services-hero">
+          <h1>Your head is a lot.<br />Let's lighten the load.</h1>
+          <p>No pressure. No judgment. Just support that fits you.</p>
+        </div>
 
-         </aside>
-         <!-- Section -->
-         <section>
+        <!-- Service Cards -->
+        <div class="service-cards">
+          <!-- Self Guided -->
+          <div class="service-card">
+            <i class="fa-solid fa-book-open"></i>
+            <h3>Self-Guided</h3>
+            <p>
+              Mood tracking, guided journals, and a safe space to vent—on your
+              own time.
+            </p>
+            <span class="tag free">Free</span>
+            <button class="service-btn" onclick="window.location.href='relax.html'">Relax Now</button>
+          </div>
 
-         </section>
+          <!-- Peer Support -->
+          <div class="service-card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Peer Support</h3>
+            <p>
+              Moderated group chats with teens who actually get what you're
+              going through.
+            </p>
+            <span class="tag community">Community</span>
+            <button class="service-btn" id="peer-support-btn">Join Group Chat</button>
+          </div>
 
-         <!-- Footer -->
-         <footer>
+          <!-- Pro Therapy -->
+          <div class="service-card highlight">
+            <i class="fa-solid fa-comments"></i>
+            <h3>1-on-1 Therapy</h3>
+            <p>
+              Text-based sessions with licensed therapists who understand Gen Z.
+            </p>
+            <span class="tag premium">Pro</span>
+            <button class="service-btn therapy-btn" id="therapy-btn">Start Therapy</button>
+          </div>
+        </div>
 
-         </footer>
+        <!-- Panic Button Section -->
+        <div class="panic">
+          <h3>Need Immediate Help?</h3>
+          <p>Crisis support is available right now. Click below for contact info.</p>
+          <button id="panic-btn" ><a href="#contact">Get Help Now</a></button>
+        </div>
 
-     </div> <!-- Main container end -->
-</body>
+        <!-- How it Works -->
+        <div class="how-it-works">
+          <h2>How it works</h2>
+          <div class="steps">
+            <div class="step">
+              <span>1</span>
+              <p>Tell us what's up</p>
+            </div>
+            <div class="step">
+              <span>2</span>
+              <p>Match with your vibe</p>
+            </div>
+            <div class="step">
+              <span>3</span>
+              <p>Start chatting safely</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Peer Support Modal -->
+      <div id="peer-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="peer-modal-title" tabindex="-1">
+        <div class="modal-content peer-modal-content">
+          <span class="close" id="peer-close" role="button" tabindex="0" aria-label="Close peer support dialog">&times;</span>
+          <h2 id="peer-modal-title">💬 Join Peer Support Group</h2>
+          <p class="modal-subtitle">Connect with teens who understand what you're going through</p>
+          
+          <div class="peer-groups">
+            <div class="group-card">
+              <h4>🎓 Academic Stress</h4>
+              <p>Dealing with school pressure, exams, college anxiety</p>
+              <p class="members">👥 342 members active</p>
+              <button class="join-btn" onclick="joinGroup('Academic Stress')">Join Now</button>
+            </div>
+            
+            <div class="group-card">
+              <h4>💔 Relationships & Love</h4>
+              <p>Talk about breakups, crushes, dating, and relationship issues</p>
+              <p class="members">👥 521 members active</p>
+              <button class="join-btn" onclick="joinGroup('Relationships')">Join Now</button>
+            </div>
+            
+            <div class="group-card">
+              <h4>😰 Anxiety & Worry</h4>
+              <p>Share coping strategies for anxiety, panic attacks, and stress</p>
+              <p class="members">👥 678 members active</p>
+              <button class="join-btn" onclick="joinGroup('Anxiety')">Join Now</button>
+            </div>
+            
+            <div class="group-card">
+              <h4>🎮 Gaming & Hobbies</h4>
+              <p>Connect over shared interests and find your people</p>
+              <p class="members">👥 892 members active</p>
+              <button class="join-btn" onclick="joinGroup('Hobbies')">Join Now</button>
+            </div>
+          </div>
+          
+          <div class="safety-note">
+            <p>✓ All groups are moderated 24/7 | ✓ Your privacy is protected | ✓ Be supportive, no judgment</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1-on-1 Therapy Modal -->
+      <div id="therapy-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="therapy-modal-title" tabindex="-1">
+        <div class="modal-content therapy-modal-content">
+          <span class="close" id="therapy-close" role="button" tabindex="0" aria-label="Close therapy dialog">&times;</span>
+          <h2 id="therapy-modal-title">🧠 Start Your Therapy Journey</h2>
+          <p class="modal-subtitle">Quick assessment to match you with the right therapist</p>
+          
+          <form id="therapy-form" class="therapy-form">
+            <div class="form-group">
+              <label>What's your biggest concern right now?</label>
+              <select required>
+                <option value="">-- Select an option --</option>
+                <option value="depression">😔 Depression & Low Mood</option>
+                <option value="anxiety">😰 Anxiety & Panic</option>
+                <option value="relationships">💔 Relationships & Family</option>
+                <option value="school">🎓 School & Academic Stress</option>
+                <option value="identity">🌈 Identity & Self-Discovery</option>
+                <option value="social">👥 Social Issues & Bullying</option>
+                <option value="other">📋 Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>How long have you been dealing with this?</label>
+              <select required>
+                <option value="">-- Select an option --</option>
+                <option value="recent">⏰ Less than a month</option>
+                <option value="months">📅 1-3 months</option>
+                <option value="year">📆 3-12 months</option>
+                <option value="longer">🗓️ Over a year</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Preferred therapist type?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="therapist" value="any" checked> Any - I'm open</label>
+                <label><input type="radio" name="therapist" value="same-age"> Someone closer to my age</label>
+                <label><input type="radio" name="therapist" value="experienced"> Experienced specialist</label>
+              </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Find My Therapist</button>
+          </form>
+          
+          <div class="therapist-info">
+            <p><strong>🔒 Confidential:</strong> All conversations are 100% private</p>
+            <p><strong>📲 Flexible:</strong> Chat anytime, anywhere</p>
+            <p><strong>👩‍⚕️ Licensed:</strong> Board-certified mental health professionals</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Room Modal (Success) -->
+      <div id="chat-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="chat-group-name" aria-describedby="chat-modal-desc" tabindex="-1">
+        <div class="modal-content chat-modal-content">
+          <span class="close" id="chat-close">&times;</span>
+          <div class="chat-header">
+            <h2 id="chat-group-name">🎓 Academic Stress</h2>
+            <p id="chat-modal-desc" class="modal-subtitle">Welcome to your new support community!</p>
+          </div>
+          
+          <div class="chat-container">
+            <div class="chat-messages" id="chat-messages-area">
+              <div class="message welcome-message">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                  <p class="message-sender"><strong>MindScape Bot</strong></p>
+                  <p>Welcome! You've joined the group. You're about to connect with amazing people like you. 💚</p>
+                </div>
+              </div>
+              <div id="chat-messages-list"></div>
+            </div>
+
+            <!-- Chat input area (hidden until Enter Chat Room) -->
+            <div class="chat-input" id="chat-input-area" style="display:none;">
+              <textarea id="chatInput" placeholder="Write a supportive message..." rows="2"></textarea>
+              <button id="send-chat-btn">Send</button>
+            </div>
+          </div>
+
+          <div class="chat-info">
+            <p>✓ Be kind and supportive | ✓ Share freely in a safe space | ✓ What's said here stays here</p>
+          </div>
+
+          <button class="enter-chat-btn" id="enter-chat-btn">Enter Chat Room 💬</button>
+          <button class="close-chat-btn" id="close-chat-btn">Maybe Later</button>
+        </div>
+      </div>
+
+      <!-- Therapist Match Modal (Success) -->
+      <div id="therapist-match-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="therapist-match-title" aria-describedby="therapist-match-desc" tabindex="-1">
+        <div class="modal-content therapist-match-content">
+          <span class="close" id="therapist-close" role="button" tabindex="0" aria-label="Close therapist match dialog">&times;</span>
+          
+          <div class="match-header">
+            <div class="match-animation">✨</div>
+            <h2 id="therapist-match-title">Perfect Match Found!</h2>
+              <p id="therapist-match-desc" class="modal-subtitle">We're connecting you with your ideal therapist</p>
+          </div>
+          
+          <div class="therapist-card">
+            <div class="therapist-avatar">👩‍⚕️</div>
+            <h3 id="match-therapist-name">Dr. Sarah Chen</h3>
+            <p class="therapist-specialty" id="match-specialty">Specializing in Anxiety & Stress Management</p>
+            <p class="therapist-bio">Licensed therapist with 8+ years of experience working with teens</p>
+          </div>
+          
+          <div class="match-details">
+            <div class="detail-item">
+              <span class="detail-icon">📱</span>
+              <div>
+                <p class="detail-label">Communication</p>
+                <p class="detail-value">Chat, Voice & Video</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">⏰</span>
+              <div>
+                <p class="detail-label">Availability</p>
+                <p class="detail-value">Within 24 hours</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">💯</span>
+              <div>
+                <p class="detail-label">Rating</p>
+                <p class="detail-value">4.9/5 from teens</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="confirmation-text">
+            <p><strong>🔒 Your Privacy is Protected</strong></p>
+            <p>All conversations are 100% confidential. Your therapist follows strict privacy protocols.</p>
+          </div>
+          
+          <button class="start-therapy-btn" id="start-therapy-btn">Start First Session 💚</button>
+          <button class="schedule-later-btn" id="schedule-later-btn">Schedule Later</button>
+        </div>
+      </div>
+
+      <!-- Success Toast Notification -->
+      <div id="success-toast" class="toast">
+        <div class="toast-content">
+          <span class="toast-icon">✓</span>
+          <p id="toast-message"></p>
+        </div>
+      </div>
+      <section id="contact">
+        <h2>Contact / Help</h2>
+        <p>If you need immediate support, reach out below:</p>
+        <ul>
+          <li><strong>Crisis Hotline:</strong> 988 (Suicide & Crisis Lifeline)</li>
+          <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+          <li><strong>Email:</strong> support@mindscape.com</li>
+          <li><strong>Emergency:</strong> 911</li>
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="footer-content">
+            <!-- Contact Information -->
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <div class="contact-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <div>
+                        <a href="mailto:support@mindscape.org">support@mindscape.org</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <div>
+                        <a href="tel:988">988 (Crisis Hotline)</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <div>
+                        <span>Online Support<br>Available Worldwide</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office Hours -->
+            <div class="footer-section">
+                <h3>Support Hours</h3>
+                <ul class="hours-list">
+                    <li>
+                        <span class="day">Chat Support</span>
+                        <span class="time">24/7 Available</span>
+                    </li>
+                    <li>
+                        <span class="day">Phone Support</span>
+                        <span class="time">9:00 AM - 9:00 PM</span>
+                    </li>
+                    <li>
+                        <span class="day">Therapy Sessions</span>
+                        <span class="time">By Appointment</span>
+                    </li>
+                </ul>
+                <div class="crisis-notice">
+                    <p>⚡ 24/7 Crisis Support Available</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home-link">Home</a>
+                <a href="#services">About Us</a>
+                <a href="#services">Mental Health Resources</a>
+                <a href="#services">Teen Support Groups</a>
+                <a href="#contact">FAQ</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- Newsletter & Social -->
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <p>Get mental health tips, resources, and support delivered to your inbox.</p>
+                
+                <div class="newsletter-box">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" />
+                    <button class="newsletter-btn">Subscribe</button>
+                </div>
+
+                <p style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Follow us for daily support:</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="trust-badges">
+                    <span class="badge">🔒 Confidential Services</span>
+                    <span class="badge">✓ Licensed Professionals</span>
+                    <span class="badge">💙 Teen-Focused Care</span>
+                </div>
+
+                
+
+                <div class="copyright">
+                    <p><strong>© 2024 MindScape Mental Health Support.</strong> All rights reserved.</p>
+                    <p style="margin-top: 0.5rem;">Licensed mental health services | Confidential support for teens and families</p>
+                    <p style="margin-top: 0.8rem; font-size: 0.85rem;">
+                        <strong>Emergency?</strong> If you or someone you know is in immediate danger, 
+                        please call 911 or text HOME to 741741 for Crisis Text Line.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    </div>
+    <!-- Main container end -->
+
+    <!-- JavaScript -->
+    <script>
+      // Modal functionality
+      const peerModal = document.getElementById('peer-modal');
+      const therapyModal = document.getElementById('therapy-modal');
+      const peerBtn = document.getElementById('peer-support-btn');
+      const therapyBtn = document.getElementById('therapy-btn');
+      const peerClose = document.getElementById('peer-close');
+      const therapyClose = document.getElementById('therapy-close');
+
+      // Accessibility helpers for modals
+      function enableModalA11y(modal) {
+        if (!modal) return;
+        // focus trap state
+        modal._focusHandler = function(e) {
+          const focusable = modal.querySelectorAll('a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])');
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (e.key === 'Tab') {
+            if (e.shiftKey && document.activeElement === first) {
+              e.preventDefault();
+              last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+          if (e.key === 'Escape') {
+            // close the modal on Escape
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            disableModalA11y(modal);
+          }
+        };
+        document.addEventListener('keydown', modal._focusHandler);
+        // Move focus into modal
+        setTimeout(() => {
+          const focusTarget = modal.querySelector('textarea, button, [tabindex]:not([tabindex="-1"])');
+          if (focusTarget) focusTarget.focus();
+          else modal.focus();
+        }, 0);
+      }
+
+      function disableModalA11y(modal) {
+        if (!modal) return;
+        if (modal._focusHandler) {
+          document.removeEventListener('keydown', modal._focusHandler);
+          delete modal._focusHandler;
+        }
+      }
+
+      // Open modals
+      peerBtn.addEventListener('click', () => {
+        peerModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        enableModalA11y(peerModal);
+      });
+
+      therapyBtn.addEventListener('click', () => {
+        therapyModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        enableModalA11y(therapyModal);
+      });
+
+      // Close modals
+      peerClose.addEventListener('click', () => {
+        peerModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        disableModalA11y(peerModal);
+      });
+
+      therapyClose.addEventListener('click', () => {
+        therapyModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        disableModalA11y(therapyModal);
+      });
+
+      // Close modal when clicking outside
+      window.addEventListener('click', (e) => {
+        if (e.target === peerModal) {
+          peerModal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          disableModalA11y(peerModal);
+        }
+        if (e.target === therapyModal) {
+          therapyModal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          disableModalA11y(therapyModal);
+        }
+        if (e.target === document.getElementById('chat-modal')) {
+          const cm = document.getElementById('chat-modal');
+          cm.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          disableModalA11y(cm);
+        }
+        if (e.target === document.getElementById('therapist-match-modal')) {
+          const tm = document.getElementById('therapist-match-modal');
+          tm.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          disableModalA11y(tm);
+        }
+      });
+
+      // Join peer support group
+      function joinGroup(groupName) {
+        peerModal.style.display = 'none';
+        
+        // Simulate loading
+        setTimeout(() => {
+          const chatModal = document.getElementById('chat-modal');
+          const groupTitle = document.getElementById('chat-group-name');
+          const messagesList = document.getElementById('chat-messages-list');
+          
+          groupTitle.textContent = groupName;
+          messagesList.innerHTML = '';
+          
+          // Simulate other members chatting
+          const sampleMessages = [
+            { name: 'Alex', text: 'Hey! Just joined too, glad to be here 😊', avatar: '👦' },
+            { name: 'Jordan', text: 'Welcome! This group has been so helpful for me', avatar: '👧' },
+            { name: 'Casey', text: 'Don\'t be shy, everyone here is super supportive', avatar: '🧑' }
+          ];
+          
+          setTimeout(() => {
+            sampleMessages.forEach((msg, i) => {
+              setTimeout(() => {
+                const msgEl = document.createElement('div');
+                msgEl.className = 'message other-message';
+                msgEl.innerHTML = `
+                  <div class="message-avatar">${msg.avatar}</div>
+                  <div class="message-content">
+                    <p class="message-sender"><strong>${msg.name}</strong></p>
+                    <p>${msg.text}</p>
+                  </div>
+                `;
+                messagesList.appendChild(msgEl);
+                messagesList.scrollTop = messagesList.scrollHeight;
+              }, i * 1000);
+            });
+          }, 500);
+          
+          chatModal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+          enableModalA11y(chatModal);
+        }, 300);
+      }
+
+      // Close chat modal
+      document.getElementById('chat-close').addEventListener('click', () => {
+        const cm = document.getElementById('chat-modal');
+        cm.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        disableModalA11y(cm);
+      });
+      
+      document.getElementById('close-chat-btn').addEventListener('click', () => {
+        const cm = document.getElementById('chat-modal');
+        cm.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        disableModalA11y(cm);
+      });
+      
+      document.getElementById('enter-chat-btn').addEventListener('click', () => {
+        // Show chat input area so user can send messages
+        const enterBtn = document.getElementById('enter-chat-btn');
+        const chatInputArea = document.getElementById('chat-input-area');
+        const messagesArea = document.getElementById('chat-messages-list');
+        enterBtn.style.display = 'none';
+        chatInputArea.style.display = 'flex';
+        document.getElementById('chatInput').focus();
+        showSuccessToast('🎉 You\'re in the room — say hi when you\'re ready!');
+
+        // Enable sending from the input
+        const sendBtn = document.getElementById('send-chat-btn');
+        const chatInput = document.getElementById('chatInput');
+
+        function appendMessage(text, sender = 'You', avatar = '🙂', cls = 'my-message') {
+          const msgEl = document.createElement('div');
+          msgEl.className = 'message ' + cls;
+          msgEl.innerHTML = `
+            <div class="message-avatar">${avatar}</div>
+            <div class="message-content">
+              <p class="message-sender"><strong>${sender}</strong></p>
+              <p>${text}</p>
+            </div>
+          `;
+          messagesArea.appendChild(msgEl);
+          messagesArea.parentElement.scrollTop = messagesArea.parentElement.scrollHeight;
+        }
+
+        function sendChatMessage() {
+          const text = chatInput.value.trim();
+          if (!text) return;
+          appendMessage(text, 'You', '🙂', 'my-message');
+          chatInput.value = '';
+
+          // Simulated supportive reply from group after a short delay
+          setTimeout(() => {
+            appendMessage('Thanks for sharing — that sounds tough. Sending you support 💚', 'Sam', '🧑', 'other-message');
+          }, 900 + Math.random() * 900);
+        }
+
+        sendBtn.onclick = sendChatMessage;
+        chatInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendChatMessage();
+          }
+        });
+      });
+
+      // Therapy form submission
+      document.getElementById('therapy-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const concern = e.target[0].value;
+        const duration = e.target[1].value;
+        const type = document.querySelector('input[name="therapist"]:checked').value;
+        
+        therapyModal.style.display = 'none';
+        
+        // Simulate matching process
+        setTimeout(() => {
+          const matchModal = document.getElementById('therapist-match-modal');
+          
+          // Generate personalized therapist match based on selection
+          const therapists = {
+            'depression': { name: 'Dr. Marcus Johnson', specialty: 'Depression & Mental Wellness' },
+            'anxiety': { name: 'Dr. Sarah Chen', specialty: 'Anxiety & Stress Management' },
+            'relationships': { name: 'Dr. Emma Wilson', specialty: 'Family & Relationship Therapy' },
+            'school': { name: 'Dr. James Park', specialty: 'Academic Stress & Performance' },
+            'identity': { name: 'Dr. Maya Patel', specialty: 'Identity & Self-Discovery' },
+            'social': { name: 'Dr. Lisa Rodriguez', specialty: 'Social Issues & Confidence' },
+            'other': { name: 'Dr. Alex Thompson', specialty: 'General Mental Health Support' }
+          };
+          
+          const therapist = therapists[concern];
+          document.getElementById('match-therapist-name').textContent = therapist.name;
+          document.getElementById('match-specialty').textContent = 'Specializing in ' + therapist.specialty;
+          
+          matchModal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+          enableModalA11y(matchModal);
+        }, 400);
+      });
+
+      // Therapist match buttons
+      document.getElementById('therapist-close').addEventListener('click', () => {
+        const tm = document.getElementById('therapist-match-modal');
+        tm.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        disableModalA11y(tm);
+      });
+      
+      document.getElementById('start-therapy-btn').addEventListener('click', () => {
+        showSuccessToast('✨ Therapy session starting! Your first chat will begin in 2 minutes.');
+        setTimeout(() => {
+          const tm = document.getElementById('therapist-match-modal');
+          tm.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          disableModalA11y(tm);
+        }, 2000);
+      });
+      
+      document.getElementById('schedule-later-btn').addEventListener('click', () => {
+        showSuccessToast('📅 We\'ll remind you to schedule your session!');
+        setTimeout(() => {
+          const tm = document.getElementById('therapist-match-modal');
+          tm.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          disableModalA11y(tm);
+        }, 1500);
+      });
+
+      // Success toast notification
+      function showSuccessToast(message) {
+        const toast = document.getElementById('success-toast');
+        document.getElementById('toast-message').textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 4000);
+      }
+
+      // Panic Button
+      document.getElementById("panic-btn").addEventListener("click", () => {
+      });
+
+      // Newsletter subscription
+      document.querySelector('.newsletter-btn').addEventListener('click', function() {
+        const emailInput = document.querySelector('.newsletter-input');
+        const email = emailInput.value.trim();
+        
+        if (email && email.includes('@')) {
+          showSuccessToast('✓ You\'re subscribed! Check your email for a welcome message.');
+          emailInput.value = '';
+        } else {
+          showSuccessToast('⚠️ Please enter a valid email address.');
+        }
+      });
+
+      // Enter key on newsletter input
+      document.querySelector('.newsletter-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          document.querySelector('.newsletter-btn').click();
+        }
+      });
+
+      // Hero buttons functionality
+      document.querySelectorAll('.hero-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          if (this.classList.contains('primary')) {
+            document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+          } else {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Smooth scroll for all navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

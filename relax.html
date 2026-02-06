@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill Zone – Relax & Play</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Assets/Css/theme.css">
+    <link rel="stylesheet" href="Assets/Css/style.css">
+    <link rel="stylesheet" href="Assets/Css/relax.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="../index.html">
+      <div class="logo-container">
+        <img class="logo" src="Assets/Images/Logo.jpg" alt="MindScape Logo" />
+        <p class="logo-name">MindScape</p>
+      </div>
+    </a>
+    <ul>
+      <li class="navbar-list"><a href="../index.html">Home</a></li>
+      <li class="navbar-list"><a href="relax.html">Chill Zone</a></li>
+      <li class="navbar-list"><a href="../contact.html">Contact</a></li>
+      <li class="navbar-list"><a href="../signup.html"><i class="fas fa-user-alt"></i></a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main class="relax-container">
+    <header class="relax-hero">
+      <h1>🧘 Welcome to the Chill Zone</h1>
+      <p>Take a breather, play some calming games, and boost your mental health. All games help reduce stress & anxiety.</p>
+      <div class="mood-tracker">
+        <p>How are you feeling right now?</p>
+        <div class="mood-buttons">
+          <button class="mood-btn" data-mood="😔">😔 Not Good</button>
+          <button class="mood-btn" data-mood="😐">😐 Okay</button>
+          <button class="mood-btn" data-mood="😊">😊 Good</button>
+          <button class="mood-btn" data-mood="🤩">🤩 Great</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Games Grid -->
+    <div class="relax-games">
+      <!-- Bubble Popper -->
+      <div class="game-card" id="bubble-popper">
+        <div class="game-header">
+          <h3>🫧 Bubble Pop Therapy</h3>
+          <span class="score-badge">Score: <span id="bubbleScore">0</span></span>
+        </div>
+        <div class="game-content">
+          <canvas id="bubbleCanvas"></canvas>
+          <div class="game-stats">
+            <p>Bubbles Popped: <strong id="bubblesPopped">0</strong>/20</p>
+            <button class="reset-btn" onclick="resetBubbleGame()">Reset Game</button>
+          </div>
+        </div>
+        <p class="game-description">💡 Clicking bubbles releases tension & builds focus. Keep popping!</p>
+      </div>
+
+      <!-- Guided Breathing -->
+      <div class="game-card" id="breathing">
+        <div class="game-header">
+          <h3>🌬️ Guided Breathing</h3>
+          <span class="tip-badge">2-4 minutes</span>
+        </div>
+        <div class="game-content breathing-content">
+          <div class="breathing-circle"></div>
+          <div class="breathing-text">
+            <p id="breathingInstruction">Inhale...</p>
+          </div>
+          <div class="breathing-controls">
+            <button class="play-btn" id="breathingBtn">Start Breathing</button>
+            <div class="breathing-count">
+              <p>Cycles Completed: <strong id="breathingCount">0</strong></p>
+            </div>
+          </div>
+        </div>
+        <p class="game-description">💡 Deep breathing reduces anxiety & calms your nervous system.</p>
+      </div>
+
+      <!-- Color Calm - Improved -->
+      <div class="game-card" id="color-calm">
+        <div class="game-header">
+          <h3>🎨 Color Therapy</h3>
+          <span class="score-badge">Relaxation Level: <span id="colorLevel">0</span>%</span>
+        </div>
+        <div class="game-content color-game-content">
+          <div class="color-grid" id="colorGrid"></div>
+          <button class="reset-btn" onclick="resetColorGame()">Clear & Refresh</button>
+        </div>
+        <p class="game-description">💡 Choosing colors mindfully boosts mood & promotes self-expression.</p>
+      </div>
+
+      <!-- Mood Journal -->
+      <div class="game-card" id="mood-journal">
+        <div class="game-header">
+          <h3>📔 Quick Mood Journal</h3>
+          <span class="tip-badge">2 minutes</span>
+        </div>
+        <div class="game-content journal-content">
+          <textarea id="journalText" placeholder="What's on your mind? Write freely..."></textarea>
+          <div class="journal-buttons">
+            <button class="save-btn" onclick="saveJournal()">Save Entry</button>
+            <span id="journalStatus"></span>
+          </div>
+          <div class="journal-entries">
+            <p>Recent Entries: <strong id="journalCount">0</strong></p>
+          </div>
+        </div>
+        <p class="game-description">💡 Journaling helps process emotions & improve mental clarity.</p>
+      </div>
+
+      <!-- Focus Grid -->
+      <div class="game-card" id="focus-grid">
+        <div class="game-header">
+          <h3>🎯 Focus Challenge</h3>
+          <span class="score-badge">Time: <span id="focusTime">0</span>s</span>
+        </div>
+        <div class="game-content focus-content">
+          <div class="focus-grid" id="focusGridContainer"></div>
+          <button class="start-btn" onclick="startFocusGame()">Start Game</button>
+          <p id="focusFeedback"></p>
+        </div>
+        <p class="game-description">💡 Build concentration & train your brain with mindful focus exercises.</p>
+      </div>
+
+      <!-- Zen Slider - Improved -->
+      <div class="game-card" id="zen-slider">
+        <div class="game-header">
+          <h3>⚖️ Balance Zone</h3>
+          <span class="score-badge">Balance: <span id="balanceValue">50</span>%</span>
+        </div>
+        <div class="game-content slider-content">
+          <div class="slider-container">
+            <input type="range" min="0" max="100" value="50" class="slider" id="zenSlider">
+          </div>
+          <div class="balance-visualization" id="balanceViz"></div>
+          <p id="balanceMessage">Find your balance...</p>
+        </div>
+        <p class="game-description">💡 Slider games help with mindfulness & finding emotional equilibrium.</p>
+      </div>
+    </div>
+
+    <!-- Mental Health Tips -->
+    <section class="tips-section">
+      <h2>🌟 Mental Health Tips</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h4>Take Breaks</h4>
+          <p>Every hour, take a 5-minute break to stretch & breathe.</p>
+        </div>
+        <div class="tip-card">
+          <h4>Stay Hydrated</h4>
+          <p>Drink water regularly - it improves focus & mood.</p>
+        </div>
+        <div class="tip-card">
+          <h4>Move Your Body</h4>
+          <p>Even 5 minutes of movement releases stress-busting endorphins.</p>
+        </div>
+        <div class="tip-card">
+          <h4>Connect</h4>
+          <p>Talk to friends or family - you're never alone in this.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="Assets/Javascript/relax.js"></script>
+</body>
+</html>
